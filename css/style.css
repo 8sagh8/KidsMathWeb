@@ -1,4 +1,39 @@
 #mainID{
-    background-color: black;
+    text-align: center;
+    vertical-align: middle;
 
+}
+
+/* Question Div styling */
+.questionClass{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.firstDigitClass{
+    padding-left:6rem;
+}
+
+.secondDigitClass{
+    padding-left:4rem;
+}
+
+.answerClass{
+    width: 10rem;
+    height: 5vh;
+}
+
+#submitAddButton{
+    margin-left: 30rem;
+}
+
+.resultClassP{
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Single Digit</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main id="mainID">
+      <h1>Kids Math Exercise - Add Single Digit</h1>
+
+      <a href="../index.html">Home</a>
+      <a href="#" class="restartClass">Restart</a>
+      <a id="startAddSingle" href="#">Start</a>
+      <hr />
+
+      <div class="questionClass">
+        <p class="questionClassP">
+          <span id="firstDigitClass"></span> +
+          <span class="secondDigitClass"></span> =
+          <input type="text" name="answer" class="answerClass" />
+        </p>
+        <br />
+        <button id="submitAddButton">Submit</button>
+      </div>
+      <br />
+      <div class="resultClass">
+        <p class="resultClassP"></p>
+        <h3>Score: <span class="scoreClass"></span> / 10</h3>
+      </div>
+    </main>
+
+    <script src="../script/script.js"></script>
+  </body>
+</html>
