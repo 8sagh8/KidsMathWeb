@@ -1,10 +1,9 @@
 
 let userScore = 0;
-let endTime = 0;
+let endTime = 1;
 
 // Import Elements
 let restartClass = document.querySelector(".restartClass");
-let submitAddButton = document.getElementById("submitAddButton");
 let startAddSingle = document.getElementById("startAddSingle");
 let firstDigitClass = document.querySelector("#firstDigitClass");
 let secondDigitClass = document.querySelector(".secondDigitClass");
@@ -17,16 +16,11 @@ let scoreClass = document.querySelector(".scoreClass");
 
 
 
-
+// checkValue function was in SubmitAddButton event listener
 // addEventListener
 window.addEventListener("load", windowLoadFunction);
-submitAddButton.addEventListener("click", checkValue);
 startAddSingle.addEventListener("click", showSingleDigits );
-document.querySelector("input").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        submitAddButton.addEventListener("click", checkValue);
-    }
-  });
+
   
   
 // Function
@@ -36,7 +30,6 @@ function showSingleDigits(){
     startAddSingle.style.display = "none";
     questionClassP.style.display = "block";
     restartClass.style.display = "block";
-    submitAddButton.style.display = "block";
     resultClass.style.display = "block";
 
     answerClass.value = "";
@@ -46,22 +39,23 @@ function showSingleDigits(){
     firstDigitClass.innerHTML = firstDigit;
     secondDigitClass.innerHTML = secondDigit;
     scoreClass.innerHTML = userScore;
-    endTime++;
-
  
 }
 
 // Time interval of 5 seconds and refresh page
+
 setInterval(function() {
-    if(endTime < 11){
+    if(endTime < 10){
+        checkValue();
         showSingleDigits();
+        endTime++;
     }
     else{
-        
         windowLoadFunction();
     }
     
-  }, 5000);
+  }, 3000);
+
 
 
 
@@ -70,7 +64,6 @@ function windowLoadFunction(){
     questionClassP.style.display = "none";
     startAddSingle.style.display = "block";
     restartClass.style.display = "none";
-    submitAddButton.style.display = "none";
     resultClass.style.display = "block";
 
     userScore = 0;
