@@ -5,7 +5,7 @@ let endTime = 1;
 // Import Elements
 let restartClass = document.querySelector(".restartClass");
 let startAddSingle = document.getElementById("startAddSingle");
-let firstDigitClass = document.querySelector("#firstDigitClass");
+let firstDigitClass = document.querySelector(".firstDigitClass");
 let secondDigitClass = document.querySelector(".secondDigitClass");
 let questionClass = document.querySelector(".questionClass");
 let questionClassP = document.querySelector(".questionClassP");
