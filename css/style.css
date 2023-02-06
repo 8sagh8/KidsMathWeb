@@ -16,17 +16,20 @@
 
 .firstDigitClass{
     padding-left:6rem;
-    font-size: 132px;
+    /* font-size: 132px; */
 }
 
 .secondDigitClass{
     padding-left:4rem;
-    font-size: 132px;
+    /* font-size: 132px; */
 }
 
 .answerClass{
     width: 10rem;
-    height: 5vh;
+    height: 20vh;
+}
+.questionClassP{
+    font-size: 132px;
 }
 
 .resultClassP{

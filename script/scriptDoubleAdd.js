@@ -4,7 +4,7 @@ let endTime = 1;
 
 // Import Elements
 let restartClass = document.querySelector(".restartClass");
-let startAddSingle = document.getElementById("startAddSingle");
+let startAddDouble = document.getElementById("startAddDouble");
 let firstDigitClass = document.querySelector(".firstDigitClass");
 let secondDigitClass = document.querySelector(".secondDigitClass");
 let questionClass = document.querySelector(".questionClass");
@@ -19,15 +19,15 @@ let scoreClass = document.querySelector(".scoreClass");
 // checkValue function was in SubmitAddButton event listener
 // addEventListener
 window.addEventListener("load", windowLoadFunction);
-startAddSingle.addEventListener("click", showSingleDigits );
+startAddDouble.addEventListener("click", showDoubleDigits);
 
   
   
 // Function
 
 // This is for Single Digit Addition only
-function showSingleDigits(){
-    startAddSingle.style.display = "none";
+function showDoubleDigits(){
+    startAddDouble.style.display = "none";
     questionClassP.style.display = "block";
     restartClass.style.display = "block";
     resultClass.style.display = "block";
@@ -42,13 +42,30 @@ function showSingleDigits(){
  
 }
 
+// This is for Double Digit Addition only
+function showDoubleDigits(){
+    
+    startAddDouble.style.display = "none";
+    questionClassP.style.display = "block";
+    restartClass.style.display = "block";
+    resultClass.style.display = "block";
+
+    answerClass.value = "";
+    answerClass.focus();
+    let firstDigit = Math.floor(Math.random() * 20);
+    let secondDigit = Math.floor(Math.random() * 20);
+    firstDigitClass.innerHTML = firstDigit;
+    secondDigitClass.innerHTML = secondDigit;
+    scoreClass.innerHTML = userScore;
+ 
+}
 
 // Time interval of 5 seconds and refresh page
 
 setInterval(function() {
     if(endTime < 10){
         checkValue();
-        showSingleDigits();
+        showDoubleDigits();
         endTime++;
     }
     else{
@@ -62,8 +79,9 @@ setInterval(function() {
 
 // window load function
 function windowLoadFunction(){
+    
     questionClassP.style.display = "none";
-    startAddSingle.style.display = "block";
+    startAddDouble.style.display = "block";
     restartClass.style.display = "none";
     resultClass.style.display = "block";
 
@@ -82,10 +100,10 @@ function checkValue(){
     if(userAnswer === correctAnswer){
         resultClassP.innerHTML = "Correct Answer";
         scoreClass.innerHTML = userScore++;
-        showSingleDigits();
+        showDoubleDigits();
     }else{
         resultClassP.innerHTML = "Wrong Answer";
-        showSingleDigits();
+        showDoubleDigits();
     }
 }
 
